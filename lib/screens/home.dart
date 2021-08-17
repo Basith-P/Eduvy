@@ -5,30 +5,61 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              children: [
-                Text('Hello'),
-                Text('Esther'),
-              ],
-            ),
-            Icon(Icons.menu_rounded),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Hello'),
+                      Text(
+                        'Esther Howard',
+                        style: TextStyle(
+                          fontSize: 26,
+                        ),
+                      ),
+                    ],
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.menu_rounded),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15),
+          padding: const EdgeInsets.symmetric(vertical: 4),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Icon(Icons.home_outlined),
-              Icon(Icons.bookmark_outline_rounded),
-              Icon(Icons.messenger_outline_rounded),
-              Icon(Icons.notifications_outlined),
-              Icon(Icons.perm_identity_outlined),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.home_outlined),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.bookmark_outline_rounded),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.messenger_outline_rounded),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.notifications_outlined),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.perm_identity_outlined),
+              ),
             ],
           ),
         ),

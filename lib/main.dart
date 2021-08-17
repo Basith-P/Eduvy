@@ -12,6 +12,8 @@ class Eduvy extends StatelessWidget {
     return MaterialApp(
       title: 'Eduvy',
       home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
     );
   }
 }
