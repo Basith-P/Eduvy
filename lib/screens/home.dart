@@ -58,48 +58,64 @@ class HomeScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/graphic-design.jpg'),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 10),
-                            Text(
-                              'Graphic Design',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/graphic-design.jpg'),
+                          Container(
+                            color: Colors.white,
+                            padding: EdgeInsets.all(15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(height: 10),
+                                Text(
+                                  'Graphic Design',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
+                                const SizedBox(height: 10),
+                                Text('Learn the basics of the design course'),
+                                const SizedBox(height: 10),
+                                Text('- 3 h 15 min'),
+                              ],
                             ),
-                            const SizedBox(height: 10),
-                            Text('Learn the basics of the design course'),
-                            const SizedBox(height: 10),
-                            Text('- 3 h 15 min'),
-                          ],
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(width: 15),
                   Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/graphic-design.jpg'),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 10),
-                            Text(
-                              'Graphic Design',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/graphic-design.jpg'),
+                          Container(
+                            color: Colors.white,
+                            padding: EdgeInsets.all(15),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(height: 10),
+                                Text(
+                                  'Graphic Design',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
+                                const SizedBox(height: 10),
+                                Text('Learn the basics of the design course'),
+                                const SizedBox(height: 10),
+                                Text('- 3 h 15 min'),
+                              ],
                             ),
-                            const SizedBox(height: 10),
-                            Text('Learn the basics of the design course'),
-                            const SizedBox(height: 10),
-                            Text('- 3 h 15 min'),
-                          ],
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
