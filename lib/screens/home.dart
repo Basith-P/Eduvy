@@ -60,8 +60,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 250,
+                  height: 239,
                   child: ListView(
+                    shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     children: [
                       Container(
