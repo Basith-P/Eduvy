@@ -65,16 +65,16 @@ class HomeScreen extends StatelessWidget {
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Container(
-                        width: 200,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          width: 200,
                           child: Column(
                             children: [
                               Container(
                                 height: 120,
                                 child: Image.asset(
-                                  'assets/images/graphic-design.jpeg',
+                                  'assets/images/courses/graphic-design.jpg',
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -87,9 +87,8 @@ class HomeScreen extends StatelessWidget {
                                     Text(
                                       'Graphic Design',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
-                                      ),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
                                     ),
                                     const SizedBox(height: 10),
                                     Text(
@@ -113,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                               Container(
                                 height: 120,
                                 child: Image.asset(
-                                  'assets/images/digital-marketing.jpg',
+                                  'assets/images/courses/digital-marketing.jpg',
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -140,7 +139,7 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -160,7 +159,83 @@ class HomeScreen extends StatelessWidget {
                       child: Text('view all'),
                     ),
                   ],
-                )
+                ),
+                Container(
+                  height: 200,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            padding: EdgeInsets.all(8),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/people/DevoneLane.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text('Devon Lane')
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            padding: EdgeInsets.all(8),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/people/AlbertFlores.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text('Albert Flores')
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            padding: EdgeInsets.all(8),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/people/RobertFox.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text('Robert Fox')
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            padding: EdgeInsets.all(8),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/images/people/FloyedMills.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text('Floyed Mills')
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
