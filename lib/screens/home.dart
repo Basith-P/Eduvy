@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/top_mentors.dart';
+import '../widgets/top_courses.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -59,90 +62,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  height: 239,
-                  child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          width: 200,
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 120,
-                                child: Image.asset(
-                                  'assets/images/courses/graphic-design.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Container(
-                                color: Colors.white,
-                                padding: EdgeInsets.all(15),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Graphic Design',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                        'Learn the basics of the design course'),
-                                    const SizedBox(height: 10),
-                                    Text('- 3 h 15 min'),
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 15),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          width: 200,
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 120,
-                                child: Image.asset(
-                                  'assets/images/courses/digital-marketing.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Container(
-                                color: Colors.white,
-                                padding: EdgeInsets.all(15),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Digital Marketing',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                        'Learn the basics of digital marketing'),
-                                    const SizedBox(height: 10),
-                                    Text('- 3 h 15 min'),
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                TopCourses(),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -160,82 +80,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Container(
-                  height: 200,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Column(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            padding: EdgeInsets.all(8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/people/DevoneLane.jpg',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Text('Devon Lane')
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            padding: EdgeInsets.all(8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/people/AlbertFlores.jpg',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Text('Albert Flores')
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            padding: EdgeInsets.all(8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/people/RobertFox.jpg',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Text('Robert Fox')
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            padding: EdgeInsets.all(8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/images/people/FloyedMills.jpg',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Text('Floyed Mills')
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
+                TopMentors(),
               ],
             ),
           ),
