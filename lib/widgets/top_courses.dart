@@ -23,7 +23,7 @@ class TopCourses extends StatelessWidget {
                     height: 120,
                     child: Image.asset(
                       'assets/images/courses/graphic-design.jpg',
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                   ),
                   Container(
