@@ -48,16 +48,26 @@ class HomeScreen extends StatelessWidget {
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.menu_rounded),
+                      icon: Icon(
+                        Icons.segment_rounded,
+                        size: 32,
+                      ),
                     ),
                   ],
                 ),
 
                 //
-                TextField(
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.search_rounded),
-                    suffixIcon: Icon(Icons.filter_rounded),
+                Container(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.search_rounded),
+                      suffixIcon: Icon(Icons.widgets_outlined),
+                      hintText: "Search here",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
                   ),
                 ),
 
