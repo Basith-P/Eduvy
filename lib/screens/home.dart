@@ -53,6 +53,14 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
+                //
+                TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.search_rounded),
+                    suffixIcon: Icon(Icons.filter_rounded),
+                  ),
+                ),
+
                 //Categories tab
                 const SizedBox(height: 20),
                 Container(
@@ -63,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                     itemCount: categories.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
                           categories[index],
                           style: TextStyle(fontWeight: FontWeight.bold),
