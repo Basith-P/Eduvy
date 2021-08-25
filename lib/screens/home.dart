@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 import '../widgets/top_mentors.dart';
 import '../widgets/top_courses.dart';
 
+final categories = [
+  "All",
+  "Design",
+  "Programming",
+  "Marketing",
+  "Data Science",
+];
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -45,22 +53,35 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 Container(
                   height: 26,
-                  child: ListView(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  // child: ListView(
+                  //   padding:
+                  //       const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  //   scrollDirection: Axis.horizontal,
+                  //   children: [
+                  //     Text('All',
+                  //         style: TextStyle(fontWeight: FontWeight.bold)),
+                  //     Text('Design',
+                  //         style: TextStyle(fontWeight: FontWeight.bold)),
+                  //     Text('Programming',
+                  //         style: TextStyle(fontWeight: FontWeight.bold)),
+                  //     Text('Marketing',
+                  //         style: TextStyle(fontWeight: FontWeight.bold)),
+                  //     Text('Data Science',
+                  //         style: TextStyle(fontWeight: FontWeight.bold)),
+                  //   ],
+                  // ),
+                  child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    children: [
-                      Text('All',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      Text('Design',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      Text('Programming',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      Text('Marketing',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      Text('Data Science',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                    ],
+                    itemCount: categories.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Text(
+                          categories[index],
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 // const SizedBox(height: 20),
