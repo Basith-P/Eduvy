@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 class TopMentors extends StatelessWidget {
-  const TopMentors({
-    Key? key,
-  }) : super(key: key);
+  final List menotors = [
+    {'name': 'Devon Lane', 'pic': 'DevoneLane.jpg'},
+    {'name': 'Albert Flores', 'pic': 'AlbertFlores.jpg'},
+    {'name': 'Robert Fox', 'pic': 'RobertFox.jpg'},
+    {'name': 'Floyed Mills', 'pic': 'FloyedMills.jpg'},
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 116,
-      child: ListView(
+      child: ListView.builder(
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
-        children: [
-          Column(
+        itemCount: menotors.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Column(
             children: [
               Container(
                 width: 100,
@@ -22,66 +26,15 @@ class TopMentors extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
-                    'assets/images/people/DevoneLane.jpg',
+                    'assets/images/people/${menotors[index]['pic']}',
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-              Text('Devon Lane')
+              Text(menotors[index]['name']),
             ],
-          ),
-          Column(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                padding: EdgeInsets.all(8),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/images/people/AlbertFlores.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Text('Albert Flores')
-            ],
-          ),
-          Column(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                padding: EdgeInsets.all(8),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/images/people/RobertFox.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Text('Robert Fox')
-            ],
-          ),
-          Column(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                padding: EdgeInsets.all(8),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/images/people/FloyedMills.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Text('Floyed Mills')
-            ],
-          ),
-        ],
+          );
+        },
       ),
     );
   }
