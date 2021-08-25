@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           'Hello,',
                           style: TextStyle(
+                            color: Color(0xff3E4F96),
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
@@ -38,6 +39,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           'Esther Howard',
                           style: TextStyle(
+                            color: Color(0xff08154B),
                             fontSize: 26,
                             fontWeight: FontWeight.bold,
                           ),
@@ -50,6 +52,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+
+                //Categories tab
                 const SizedBox(height: 20),
                 Container(
                   height: 26,
@@ -68,6 +72,8 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                 ),
+
+                //
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
@@ -76,6 +82,7 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         'Popular courses',
                         style: TextStyle(
+                          color: Color(0xff08154B),
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -89,21 +96,27 @@ class HomeScreen extends StatelessWidget {
                 ),
                 TopCourses(),
                 const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Our Top Mentors',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
+
+                //
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Our Top Mentors',
+                        style: TextStyle(
+                          color: Color(0xff08154B),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text('view all'),
-                    ),
-                  ],
+                      TextButton(
+                        onPressed: () {},
+                        child: Text('view all'),
+                      ),
+                    ],
+                  ),
                 ),
                 TopMentors(),
               ],
@@ -111,6 +124,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+
+      //
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         child: Padding(

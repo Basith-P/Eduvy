@@ -23,7 +23,7 @@ class TopCourses extends StatelessWidget {
                     height: 120,
                     child: Image.asset(
                       'assets/images/courses/graphic-design.jpg',
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fitWidth,
                     ),
                   ),
                   Container(
@@ -35,7 +35,9 @@ class TopCourses extends StatelessWidget {
                         Text(
                           'Graphic Design',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                            color: Color(0xff112B96),
+                            fontSize: 18,
+                          ),
                         ),
                         const SizedBox(height: 10),
                         Text('Learn the basics of the design course'),
@@ -71,7 +73,9 @@ class TopCourses extends StatelessWidget {
                         Text(
                           'Digital Marketing',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                            color: Color(0xff112B96),
+                            fontSize: 18,
+                          ),
                         ),
                         const SizedBox(height: 10),
                         Text('Learn the basics of digital marketing'),
