@@ -53,25 +53,9 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 Container(
                   height: 26,
-                  // child: ListView(
-                  //   padding:
-                  //       const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  //   scrollDirection: Axis.horizontal,
-                  //   children: [
-                  //     Text('All',
-                  //         style: TextStyle(fontWeight: FontWeight.bold)),
-                  //     Text('Design',
-                  //         style: TextStyle(fontWeight: FontWeight.bold)),
-                  //     Text('Programming',
-                  //         style: TextStyle(fontWeight: FontWeight.bold)),
-                  //     Text('Marketing',
-                  //         style: TextStyle(fontWeight: FontWeight.bold)),
-                  //     Text('Data Science',
-                  //         style: TextStyle(fontWeight: FontWeight.bold)),
-                  //   ],
-                  // ),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
+                    physics: BouncingScrollPhysics(),
                     itemCount: categories.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(

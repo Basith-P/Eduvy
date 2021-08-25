@@ -11,6 +11,7 @@ class TopMentors extends StatelessWidget {
       height: 116,
       child: ListView(
         scrollDirection: Axis.horizontal,
+        physics: BouncingScrollPhysics(),
         children: [
           Column(
             children: [

@@ -10,6 +10,7 @@ class TopCourses extends StatelessWidget {
     return Container(
       height: 239,
       child: ListView(
+        physics: BouncingScrollPhysics(),
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         children: [
