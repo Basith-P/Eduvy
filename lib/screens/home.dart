@@ -18,8 +18,8 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Color(0xfff5f5f5),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
             child: Column(
               children: [
                 Row(
@@ -58,33 +58,42 @@ class HomeScreen extends StatelessWidget {
 
                 //
                 Container(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  margin: const EdgeInsets.symmetric(vertical: 20),
                   child: TextField(
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search_rounded),
                       suffixIcon: Icon(Icons.widgets_outlined),
                       hintText: "Search here",
+                      fillColor: Colors.white,
+                      filled: true,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none,
                       ),
                     ),
                   ),
                 ),
 
                 //Categories tab
-                const SizedBox(height: 20),
                 Container(
-                  height: 26,
+                  // margin: EdgeInsets.symmetric(vertical: 20),
+                  height: 46,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     physics: BouncingScrollPhysics(),
                     itemCount: categories.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Text(
-                          categories[index],
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                      return Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 2),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            categories[index],
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff000000),
+                            ),
+                          ),
                         ),
                       );
                     },
