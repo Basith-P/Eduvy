@@ -34,35 +34,17 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.home_outlined),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.bookmark_outline_rounded),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.messenger_outline_rounded),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.notifications_outlined),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.perm_identity_outlined),
-              ),
-            ],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_rounded),
+            label: 'Home',
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bookmark_outline_rounded),
+            label: 'Favorites',
+          ),
+        ],
       ),
     );
   }
